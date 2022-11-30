@@ -16,8 +16,8 @@ function LogIn({ isLoggedIn, logIn }) {
     }
 
     const handleSubmit = (e) => {
-        e.preventDefault();
         onSubmit();
+        e.preventDefault();
     };
 
     const handleChange = (e) => {
@@ -36,7 +36,7 @@ function LogIn({ isLoggedIn, logIn }) {
             <div className="middle-center">
                 <h1>Login</h1>
                 <div className="form-con">
-                    <form onSubmit={onSubmit}>
+                    <form onSubmit={handleSubmit}>
                         <div className="form-group">
                             <input type="email" name="email" value={values['email']} onChange={handleChange}/>
                         </div>
@@ -44,7 +44,7 @@ function LogIn({ isLoggedIn, logIn }) {
                             <input type="password" name="password" value={values['password']}  onChange={handleChange}/>
                         </div>
                         <div>
-                            <button onClick={handleSubmit}>Submit</button>
+                            <button>Submit</button>
                         </div>
                     </form>
                 </div>
